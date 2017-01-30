@@ -11,5 +11,6 @@ cp ~/.vim/bundles.vim ~/mydot/.vim/
 cp ~/.vim/function.vim ~/mydot/.vim/
 cp ~/.vim/plugin.vim ~/mydot/.vim/
 cp ~/.vim/register.vim ~/mydot/.vim/
-
+cp ~/.vim/filetype.vim ~/mydot/.vim/
+cp -r ~/.vim/after ~/mydot/.vim/
 cp -r ~/sh ~/mydot/

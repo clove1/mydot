@@ -152,7 +152,7 @@ let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 """ vim-markdown
-autocmd BufNewFile,BufReadPost *.md,*.markdown,*.html set filetype=markdown
+autocmd BufNewFile,BufReadPost *.md,*.markdown set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 """ vim-instant-markdown

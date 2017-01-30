@@ -31,12 +31,12 @@ set encoding=utf-8
 " 들여쓰기 설정
 set autoindent                  " 자동으로 들여쓰기를 한다. set ai
 set smartindent                 " 좀더 똑똑한 들여쓰기를 위한 옵션이다.
-set cindent                     " C 프로그래밍을 할때 자동으로 들여쓰기를 한다.
 set tabstop=2                   " Tab을 눌렀을 때 8칸 대신 4칸 이동하도록 한다.
 set shiftwidth=2                " 자동 들여쓰기를 할때 4칸 들여쓰도록 한다.
 set expandtab                   " 탭문자 공백으로 처리
-" set textwidth=79                " 만약 79번째 글자를 넘어가면 \
 set smarttab
+" set cindent                     " C 프로그래밍을 할때 자동으로 들여쓰기를 한다.
+" set textwidth=79                " 만약 79번째 글자를 넘어가면 \
 
 " 검색 설정
 set showmatch                   " automatically show matching brackets. works like it does in bbedit.
@@ -302,22 +302,6 @@ autocmd VimLeave * call AutoSaveSession()
 
 " 버퍼를 열때 파일의 디렉터리로 경로 설정
 autocmd BufEnter * silent! lcd %:p:h
-
-" customExecute 함수 사용시 파일별로 설정 로드
-autocmd BufRead,BufNewFile *.py source ~/.vim/python.vim
-autocmd BufRead,BufNewFile *.ahk source ~/.vim/autohotkey.vim
-
-" 파일별로 탭문자 설정
-autocmd FileType autohotkey setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
-autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-
-" syntax support
-autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 
 "Set UTF-8 as the default encoding for commit messages
 autocmd BufReadPre COMMIT_EDITMSG,git-rebase-todo setlocal fileencodings=utf-8
